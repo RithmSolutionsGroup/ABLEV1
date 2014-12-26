@@ -6,14 +6,13 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
 
 namespace ABLEV1.iOS
 {
 	[Register ("AppDelegate")]
-	public partial class AppDelegate : FormApplicationDelegate
+	public partial class AppDelegate : FormsApplicationDelegate
 	{
-		UIWindow window;
-
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			Forms.Init ();
