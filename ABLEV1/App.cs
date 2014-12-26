@@ -8,16 +8,19 @@ namespace ABLEV1
 	{
 		public App()
 		{
-			MainPage = new ContentPage
-			{
-				Content = new Label
-				{
-					Text = "Hello, Forms !",
-					VerticalOptions = LayoutOptions.CenterAndExpand,
-					HorizontalOptions = LayoutOptions.CenterAndExpand,
+			MainPage = new TabbedPage {
+				BackgroundColor = Color.Black,
+				Children = {
+					new MainScreen(),
+					new MainScreen() 
 				},
+
 			};
+
+
 		}
+
+
 
 		protected override void OnResume()
 		{
