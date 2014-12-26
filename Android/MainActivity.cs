@@ -14,7 +14,7 @@ using Xamarin.Forms.Platform.Android;
 namespace ABLEV1.Android
 {
 	[Activity (Label = "ABLEV1.Android.Android", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : AndroidActivity
+	public class MainActivity : FormsApplicationActivity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -22,7 +22,7 @@ namespace ABLEV1.Android
 
 			Xamarin.Forms.Forms.Init (this, bundle);
 
-			SetPage (App.GetMainPage ());
+			LoadApplication (new App());
 		}
 	}
 }

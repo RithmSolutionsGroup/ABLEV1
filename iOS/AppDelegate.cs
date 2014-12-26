@@ -18,12 +18,9 @@ namespace ABLEV1.iOS
 		{
 			Forms.Init ();
 
-			window = new UIWindow (UIScreen.MainScreen.Bounds);
-			
-			window.RootViewController = App.GetMainPage ().CreateViewController ();
-			window.MakeKeyAndVisible ();
-			
-			return true;
+			LoadApplication(new App());
+
+			return base.FinishedLaunching(app, options);
 		}
 	}
 }
