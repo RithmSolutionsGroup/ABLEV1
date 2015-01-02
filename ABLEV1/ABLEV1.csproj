@@ -47,7 +47,6 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Images\Thumbs.db" />
-    <None Include="Images\Page1\JustLearn-Icon.png" />
     <None Include="Images\Page1\TabIcons\Icon3.png" />
   </ItemGroup>
   <ItemGroup>
@@ -59,5 +58,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Images\Logos\ABLE-LOGO-1.png" />
     <EmbeddedResource Include="Images\Logos\ABLE-LOGO-3.png" />
+    <EmbeddedResource Include="Images\Page1\JustLearn-Icon.png" />
+    <EmbeddedResource Include="Images\Page1\Dealings-Icon.png" />
+    <EmbeddedResource Include="Images\Page1\QCard-Icon.png" />
+    <EmbeddedResource Include="Images\Page1\RatingsFeedback-Icon.png" />
   </ItemGroup>
 </Project>

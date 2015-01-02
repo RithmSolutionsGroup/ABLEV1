@@ -12,7 +12,9 @@ namespace ABLEV1
 				BackgroundColor = Color.Black,
 				Children = {
 					new MainScreen(),
-					new MainScreen() 
+					new MainScreen(),
+					new MainScreen(),
+					new MainScreen(),
 				},
 
 			};
