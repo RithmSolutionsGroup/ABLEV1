@@ -33,6 +33,10 @@
     <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainScreen.cs" />
+    <Compile Include="NavigationPages\DealingsPage.xaml.cs">
+      <DependentUpon>DealingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.3.0.6292\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.0.6292\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
@@ -51,6 +55,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
+    <Folder Include="NavigationPages\" />
+    <Folder Include="Images\Other\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\Logos\ABLE-LOGO-2.png">
@@ -62,5 +68,10 @@
     <EmbeddedResource Include="Images\Page1\Dealings-Icon.png" />
     <EmbeddedResource Include="Images\Page1\QCard-Icon.png" />
     <EmbeddedResource Include="Images\Page1\RatingsFeedback-Icon.png" />
+    <EmbeddedResource Include="NavigationPages\DealingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Logos\ABLE-LOGO-4.png" />
+    <EmbeddedResource Include="Images\Other\RightArrow.png" />
   </ItemGroup>
 </Project>

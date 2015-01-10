@@ -11,10 +11,10 @@ namespace ABLEV1
 			MainPage = new TabbedPage {
 				BackgroundColor = Color.Black,
 				Children = {
-					new MainScreen(),
-					new MainScreen(),
-					new MainScreen(),
-					new MainScreen(),
+					new NavigationPage(new MainScreen()),
+					new NavigationPage(new MainScreen()),
+					new NavigationPage(new MainScreen()),
+					new NavigationPage(new MainScreen()),
 				},
 
 			};

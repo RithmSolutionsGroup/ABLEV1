@@ -8,9 +8,9 @@ namespace ABLEV1
 	public class MainScreen : ContentPage
 	{
 
-		private void OnLayoutClicked ()
+		async private void OnLayoutClicked (Page page)
 		{
-
+			await Navigation.PushAsync (page);
 		}
 
 		public MainScreen ()
@@ -23,7 +23,7 @@ namespace ABLEV1
 				VerticalOptions = LayoutOptions.FillAndExpand,
 				//4 Rows for the Logo, Buttons, and Extra Space at the bottom (0, 1, 2, 3)
 				RowDefinitions = {
-					new RowDefinition { Height = new GridLength (1.5, GridUnitType.Star) },
+					new RowDefinition { Height = new GridLength (1, GridUnitType.Star) },
 					new RowDefinition { Height = new GridLength (2, GridUnitType.Star) },
 					new RowDefinition { Height = new GridLength (2, GridUnitType.Star) },
 					new RowDefinition { Height = new GridLength (1, GridUnitType.Star) }
@@ -50,13 +50,9 @@ namespace ABLEV1
 							HorizontalOptions = LayoutOptions.CenterAndExpand,
 							Orientation = StackOrientation.Horizontal,				
 							Children = {
-								//First Image (ABLE Logo)
+								//ABLE Logo Image
 								new Image {
-									Source = ImageSource.FromResource ("ABLEV1.Images.Logos.ABLE-LOGO-1.png"),
-								},
-								//Second Image (ABLE Name + SubTitle)
-								new Image {
-									Source = ImageSource.FromResource ("ABLEV1.Images.Logos.ABLE-LOGO-2.png")
+									Source = ImageSource.FromResource ("ABLEV1.Images.Logos.ABLE-LOGO-4.png"),
 								},
 							}
 						}
@@ -105,7 +101,8 @@ namespace ABLEV1
 					//GestureRecognizer to perform Button Presses on Icon
 					GestureRecognizers = {
 						new TapGestureRecognizer {
-							Command = new Command (() => Debug.WriteLine ("Dealings")),
+							Command = new Command (() => OnLayoutClicked(new DealingsPage())),
+
 						}
 					},
 					//Adding the Image and Label for the Button
@@ -194,9 +191,6 @@ namespace ABLEV1
 				}, 1, 2, 2, 3);
 
 			BackgroundColor = Color.White;
-
-			// Accomodate iPhone status bar.
-			this.Padding = new Thickness (10, Device.OnPlatform (20, 0, 0), 10, 5);
 
 			Content = grid;
 
