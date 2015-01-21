@@ -69,7 +69,7 @@ namespace ABLEV1
 					//GestureRecognizer to perform Button Presses on Icon
 					GestureRecognizers = {
 						new TapGestureRecognizer {
-							Command = new Command (() => Debug.WriteLine ("Just Learn")),
+							Command = new Command (() => OnLayoutClicked(new JustLearnPage())),
 						}
 					},
 					//Adding the Image and Label for the Button
@@ -134,7 +134,7 @@ namespace ABLEV1
 					//GestureRecognizer to perform Button Presses on Icon
 					GestureRecognizers = {
 						new TapGestureRecognizer {
-							Command = new Command (() => Debug.WriteLine ("Q Card")),
+							Command = new Command (() => OnLayoutClicked(new QCardPage())),
 						}
 					},
 					//Adding the Image and Label for the Button
@@ -166,7 +166,7 @@ namespace ABLEV1
 					//GestureRecognizer to perform Button Presses on Icon
 					GestureRecognizers = {
 						new TapGestureRecognizer {
-							Command = new Command (() => Debug.WriteLine ("Ratings/Feedback")),
+							Command = new Command (() => OnLayoutClicked(new RatingsFeedbackPage())),
 						}
 					},
 					//Adding the Image and Label for the Button

@@ -10,6 +10,11 @@ namespace ABLEV1
 	{
 		private static StackLayout Stack;
 
+		async private void OnLayoutClicked (Page page)
+		{
+			await Navigation.PushAsync (page);
+		}
+
 		static bool isPortrait (Page p)
 		{
 			return p.Width < p.Height;
@@ -33,7 +38,7 @@ namespace ABLEV1
 
 		public DealingsPage ()
 		{
-			InitializeComponent ();
+
 			Stack = new StackLayout ();
 			Stack.Orientation = StackOrientation.Vertical;
 
@@ -109,6 +114,7 @@ namespace ABLEV1
 								TextColor = Color.Black,
 								BorderRadius = 15,
 								HeightRequest = 40,
+								Command = new Command (() => OnLayoutClicked(new AnalyticalPage())),
 							},
 							new Button {
 								BackgroundColor = Color.FromHex ("#CAD7EE"),
@@ -116,6 +122,7 @@ namespace ABLEV1
 								TextColor = Color.Black,
 								BorderRadius = 15,
 								HeightRequest = 40,
+								Command = new Command (() => OnLayoutClicked(new DriverPage())),
 							},
 							new Button {
 								BackgroundColor = Color.FromHex ("#CAD7EE"),
@@ -123,6 +130,7 @@ namespace ABLEV1
 								TextColor = Color.Black,
 								BorderRadius = 15,
 								HeightRequest = 40,
+								Command = new Command (() => OnLayoutClicked(new AmiablePage())),
 							},
 							new Button {
 								BackgroundColor = Color.FromHex ("#CAD7EE"),
@@ -130,6 +138,7 @@ namespace ABLEV1
 								TextColor = Color.Black,
 								BorderRadius = 15,
 								HeightRequest = 40,
+								Command = new Command (() => OnLayoutClicked(new ExpressivePage())),
 							}
 
 						},
