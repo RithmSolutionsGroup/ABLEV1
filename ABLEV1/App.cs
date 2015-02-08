@@ -22,7 +22,10 @@ namespace ABLEV1
 
 		}
 
-
+		public static bool isPortrait (Page p)
+		{
+			return p.Width < p.Height;
+		}
 
 		protected override void OnResume()
 		{
